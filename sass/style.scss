@@ -1,0 +1,2440 @@
+/*
+Template Name: WS HTML 5 & Bootstrap 5 quick start pack 2021
+Author: Wahed Nur
+Author URI: http://wahednur.com/
+Description: WS HTML 5 & Bootstrap 5 quick start pack 2021. It contain bootstrap 5.0-alfa, fontawesome pro 5.15.2, linear icon, element icon, google medial icon, aos, wowjs, owl carousel & custom media query
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: WS, Wahed Nur, Boilerplate, HTML5, CSS,
+
+*/
+
+// ---SCSS varialbe --- start 
+$primary-color: #D2A9AF;
+$secoundary-color: #AE8395;
+$active-color: #C0809B;
+$sub-color:#6C2D2D;
+$offer-color:#980303;
+$white-color: #fff;
+$sub-menue-bg: #C298AA;
+$sub-menu-hover: #D2A9AF;
+$menu-bg:#AE8395;
+
+// ---SCSS varialbe --- end 
+
+/* --- CSS global variable start --- */
+:root{
+    --primary-color: #D2A9AF;
+    --secoundary-color: #AE8395;
+    --active-color: #C0809B;
+    --sub-color:#6C2D2D;
+    --offer-color:#980303;
+    --white-color: #fff;
+    --sub-menue-bg: #C298AA;
+    --sub-menu-hover: #D2A9AF;
+    --menu-bg:#AE8395;
+
+}
+/* --- CSS global variable end --- */
+
+
+/* --- Global Reset css start --- */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+a, h1, h2, h3, h4, h5 h6, ul, li, p{
+    padding: 0;
+    margin: 0;
+    
+
+}
+li{
+    list-style: none;
+}
+/* --- Global Reset css end --- */
+
+/* --- Global CSS start  --- */
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+    background-color: #F1F1F1;
+}
+a{
+    text-decoration: none;
+    color: $primary-color;
+    &:hover{
+        color: $active-color;
+    }
+}
+
+.left-section {
+    width: 200px;
+    float: left;
+    
+}
+.right-section{
+    width: calc(100% - 200px);
+   
+    
+}
+
+
+
+
+.header-wrapper.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    width: calc(100% - 200px) !important;
+
+    
+}
+#countryId, #stateId, #cityId {
+    width: 100%;
+    height: 38px;
+	background-color: #fff;
+	border: 1px solid $primary-color;
+    border-radius: 5px;
+}
+#store-payment, #tax-case, #tax-class, #shipping-class{
+	width: 100%;
+	height: 38px;
+	background-color: #fff;
+	border: 1px solid $primary-color;
+    border-radius: 5px;
+}
+#prodyct-type {
+    width: 280px;
+    height: 38px;
+    background-color: $white-color;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+}
+.form-control{
+    border: 1px solid $primary-color;
+    
+}
+.table-ch{
+    background-color: $primary-color;
+    color: $white-color;
+}
+.shppping-title{
+    background-color: $primary-color;
+    padding: 10px;
+    margin-bottom: -20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: calc(100% - 40px);
+    .title-group{
+        color: $white-color;
+        font-weight: 500;
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+
+// input[type="checkbox"]{
+//     width: 30px;
+//     height: 30px;
+//     position: relative;
+//     &::after{
+//         content: "";
+//         left: 0;
+//         top: 0;
+//         width: 30px;
+//         height: 30px;
+//         border: 2px solid $primary-color;
+//         position: absolute;
+//         z-index: 1;
+//     }
+    
+
+// }
+// .checkbox::before{
+//     content: '';
+//     background: #fff;
+//     border: 2px solid #d04a4a;
+//     display: inline-block;
+//     vertical-align: middle;
+//     width: 20px;
+//     height: 20px;
+//     padding: 2px;
+//     margin-right: 10px;
+//     text-align: center;
+// }
+.edit-btn, .delete-btn {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: $white-color;
+    padding: 5px 6px;
+    &:hover{
+        background-color: $active-color;
+        color: $white-color;
+    }
+}
+#shipping-method{
+    width: 100%;
+    height: 38px;
+}
+.modal-dialog{
+    max-width: 800px;
+    
+}
+#taxcase, #calculation_type, #add-shipping {
+    width: 100%;
+    height: 38px;
+    border: 1px solid $primary-color;
+    color: rgb(34, 34, 34);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.red{
+    color: red;
+}
+.add-btn-tiger{
+    background-color: $primary-color;
+    padding: 10px 20px;
+    color: $white-color;
+    border: 1px solid $primary-color;
+    .add-btn{
+        margin-left: 10px;
+    }
+    &:hover{
+        background-color: $active-color;
+    }
+}
+.modal-body{
+    p{
+        margin-bottom: 15px;
+    }
+}
+
+/* --- Global CSS end  --- */
+/* Header Menu CSS start*/
+.header-section{
+    transition: all ease-in-out 0.5s;
+    display: block;
+    float: left;
+    width: 100%;
+    .left-section{
+        background-color: $primary-color;
+        text-align: center;
+        box-shadow: 0px 2px 8px rgba($color: #000000, $alpha: .2);
+        .logo-container{
+            position: fixed;
+            width: 200px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            background-color: $primary-color;
+        }
+    }
+    .right-section{
+        float: right;
+        .header-wrapper{
+            width: 100%;
+            float: right;
+            display: flex;
+            height: 50px;
+            background-color: $white-color;
+            box-shadow: 0px 2px 8px rgba($color: #000000, $alpha: .2);
+            align-items: center;
+            justify-content: space-between;
+            
+            .toggle-icon{
+                width: 50px;
+                text-align: center;
+                position: relative;
+                padding: 16px 14px;
+                cursor: pointer;
+                &::after{
+                    content: "";
+                    right: 0;
+                    top: -0px;
+                    width: 1px;
+                    height: 50px;
+                    background-color: #000000;
+                    position: absolute;
+                    
+                }
+                &:hover{
+                    background-color: $active-color;
+                    color: $white-color;
+                    
+                }
+            }
+            .header-manu-area{
+                width: calc(100% - 250px);
+                float: right;
+                margin-right: 20px;
+                nav{
+                    float: right;
+                    width: 100%;
+                    
+                    a{
+                        padding: 16px 20px;
+                        transition: all .3s ease-in-out;
+                        text-transform: capitalize;
+                        .nav-item {
+                            margin-left: 6px;
+                        }
+                        
+                        &:hover{
+                            background-color: $primary-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+                
+                
+            }
+            .header-vendor-user-area{
+                float: left;
+                width: 200px;
+                height: 50px;
+                
+                .vendor-toggle{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    .v-img-body{
+                        height: 45px;
+                        margin-right: 10px;
+                        
+                        .img-crop{
+                            width: 45px;
+                            height: 45px; 
+                            border-radius: 45px;
+                            border: 2px solid $primary-color;
+                            overflow: hidden;
+
+                        }
+                    }
+                    .v-username{
+                        font-size: 20px;
+                        // margin-top: 14px;
+                        font-weight: 500px;
+                    }
+                }
+                .vendor-user-dropdown{
+                    position: absolute;
+                    right: -250px;
+                    top: 50px;
+                    background-color: $white-color;
+                    border-radius: 0px 0px 5px 5px;
+                    box-shadow: 0px 2px 8px rgba($color: #000000, $alpha: .2);
+                    padding: 5px;
+                    border: 1px solid $primary-color;
+                    width: 200px;
+                    display: none;
+                    .vendor-menu-inner{
+                        width: 100%;
+                        height: 100%;
+                        .vendor-innerlogo-area{
+                            background-color: $primary-color;
+                            margin-bottom: 20px;
+                            text-align: center;
+                            padding: 30px;
+                            width: 100%;
+                            margin: 0 auto;
+                            .vendor-innerlogo-border{
+                                height: 100px;
+                                width: 100px;
+                                border: 3px solid $white-color;
+                                margin: 0 auto;
+                            }
+                        }
+                        .vendor-menu-inner{
+                            .header-vendor-name{
+                                padding-top: 20px;
+                                padding-left: 10px;
+                            }
+                            .vendor-top-link{
+                                width: 100%;
+                                a{
+                                    width: 100%;
+                                    float: left;
+                                    padding: 10px 10px;
+                                    .link-item{
+                                       padding-left: 10px;
+                                    }
+                                }
+                                .hr-bar{
+                                    width: 100%;
+                                    float: left;
+                                }
+                                .logout-btn{
+                                    background-color: $primary-color;
+                                    color: $white-color;
+                                    transition: all .3s ease-in-out;
+                                    &:hover{
+                                        background-color: $active-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .vendor-user-dropdown.active{
+
+                    display: block  !important;
+                    height: 379px;
+                    right: 0;
+                    z-index: 501;
+                }
+            }
+        }
+        
+    }
+}
+.content-wrapper{
+    float: left;
+    width: 10%;
+}
+.header-manu-area{
+    position: relative;
+}
+.primary-nav{
+    position: absolute !important;
+    z-index: 55 !important;
+}
+.header-manu-area nav {
+    text-align: right;
+    margin-top: -10px;
+    
+}
+
+.header-section .right-section .header-wrapper .header-manu-area nav a.active{
+    background-color: $active-color;
+    color: #fff;
+    z-index: 100;
+
+    
+}
+
+.wrapper.profile-management{
+    z-index: -1;
+}
+/* Header Menu CSS end*/
+
+/* --- Global CSS end  --- */
+
+/* --- Vendor Deshboard CSS start --- */
+.content-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .left-section{
+        width: 200px !important;
+        display: flex;
+        flex-direction: column;
+        background-color: $primary-color;      
+        height: calc(100vh - 40px);
+        
+        .position-fixed{
+            width: 200px;
+            top: 50px;
+        }
+        .nav-head{
+            width: 100%;
+            background-color: $active-color;
+            display: flex;
+            padding: 5px 20px;
+           h4{
+            line-height: 25x;
+            margin-top: 5px;
+            color: $white-color;
+            font-weight: 400;
+           }
+        }
+        a{
+            width: 100%;
+            float: left;
+            padding: 10px 20px;
+            background-color: $secoundary-color;
+            color: $white-color;
+        }
+        &::before {
+            content: "";
+            width: 200px;
+            height: calc(100% - 40px);
+            top: 50px;
+            left: 0;
+            position: fixed;
+            background-color: $primary-color;
+            z-index: -50;
+            transition: all 0.3s ease-in-out;
+        }
+        
+    }
+    .left-section.active::before {
+        content: "";
+        width: 200px;
+        height: calc(100vh - 40px);
+        top: 50;
+        left: -200px;
+        position: fixed;
+        background-color: $primary-color;
+        z-index: -50;
+    }
+    .right-section{
+        width: calc(100% - 200px);
+    }
+}
+.primary-nav{
+    
+}
+.primary-nav ul li{
+    a{
+       &:hover{
+            background-color: $active-color;
+       }
+    }
+    
+}
+.drop-down2{
+    display: none;
+}
+   
+.drop-down2.active{
+    display: block;
+}
+.drop-down{
+   background-color: $sub-color !important;
+   z-index: 1;
+ 
+}
+.menu{
+    background-color: $secoundary-color;
+}
+.sub-menu{
+    display: none;
+    z-index: 10;
+    .sub-item{
+        background-color: $sub-menue-bg !important;
+        &:hover{
+            background-color: $sub-menu-hover !important;
+        }
+    }
+    
+}
+.dropdown{
+    float: right;
+    transition: all ease-in-out 0.3s;
+    
+}
+.dropdown.rotate{
+    transform: rotate(90deg);
+    
+}
+.sub-item.active{
+    background-color: $sub-menu-hover !important;
+    transition: all ease-in-out 0.3s;
+}
+.item-list.active{
+    background-color: $active-color !important;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 360px;
+    margin: 30px auto 20px;
+    background: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #4D4D4D;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+
+.accordion li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+
+.accordion li.open .link {
+    color: #b63b4d;
+}
+
+.accordion li.open i {
+    color: #b63b4d;
+}
+
+.accordion li.open i.fa-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.bttn-group{
+    display: flex;
+    justify-content: space-between;
+    #action,
+    #filter {
+        height: 38px;
+        width: calc(100% - 100px);
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+    }
+    .od-btn{
+        padding: 5px 20px;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        transition: all ease-in-out 0.3s;
+        color: $white-color;
+        &:hover{
+            background-color: $active-color;
+            
+        }
+    }
+}
+.inpt-group{
+    display: flex;
+}
+.btn-show {
+    padding: 5px 20px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+    color: $white-color;
+
+    &:hover {
+        background-color: $active-color;
+
+    }
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+
+
+.submenu {
+    display: none;
+    background: #444359;
+    font-size: 14px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #4b4a5e;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 42px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+    background: #b63b4d;
+    color: #FFF;
+}
+.mobile-vendor-menu{
+    display: none;
+}
+/* --- Vendor Deshboard CSS end --- */
+/* --- Responsive area start  --- */
+@media(min-width:1024px){
+    .header-manu-area{
+        nav {
+            width: 100% !important;
+            a{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    
+    
+}
+@media(min-width:1440px){
+    .image-gallary .gal-img{
+        width: 27% !important;
+    }
+    
+}
+
+
+@media(min-width:1140px){
+    .header-manu-area{
+        .mobile-vendor-menu{
+            display: none;
+        }
+        nav {
+            width: 100% !important;
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+
+    .content-wrapper{
+        .left-section{
+            margin-left: 0px !important;
+            transition: all ease-in-out .3s;
+            
+            
+           
+        }
+        
+        .left-section.active{
+            margin-left: -200px !important;
+        }
+        
+        .right-section.active{
+            width: 100% !important;
+            
+        }
+        
+    }
+    
+}
+
+@media(max-width:1023px){
+    .header-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all ease-in-out 0.5s;
+        
+    }
+    .page-title {
+        margin-top: 70px !important;
+    }
+    
+    .header-manu-area{
+        .mobile-vendor-menu{
+            display: block;
+            float: right;
+            position: absolute;
+            right: 0;
+            top: -25px;
+            z-index: 1;
+            padding: 16px;
+            background-color: $primary-color;
+            color: $white-color;
+            cursor: pointer;
+            z-index: 51;
+        }
+        position: relative;
+        nav {
+            display: flex;
+            flex-direction: column;
+            background-color: $primary-color;
+            color: $white-color;
+            position: absolute;
+            width: 100%;
+            text-align: left;
+            top: 30px;
+            right: 0px;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 0px 2px 8px rgba($color: #000000, $alpha: 0.2);
+            z-index: 52;
+            a{
+                color: $white-color;
+                &:hover{
+                    background-color: $active-color !important;
+                    padding: 10px 10px;
+                    
+                }
+            }
+           
+        }
+        .mobile-top-nav{
+            display: none;
+            text-align: right;
+            
+        }
+        .mobile-top-nav.active{
+            display: block !important;
+            z-index: 53;
+        }
+
+    }
+    .v-username{
+        display: none;
+    }
+    .header-vendor-user-area{
+        width:60px !important;
+    }
+    .header-section .right-section .header-wrapper .header-manu-area{
+        width: calc(100% - 90px);
+        text-align: right !important;
+        float: right;
+    }
+    .header-section .right-section {
+        width: calc(100% - 200px);
+        
+    }
+    .content-wrapper{
+        display: flex;
+        .left-section{
+            margin-left: -200px !important;
+            transition: all .3s ease-in-out;
+            width: 200px !important;
+            
+        }
+        .left-section.active{
+            margin-left: 0px !important;
+            width: 200px !important;
+            top: 50px;
+        }
+        
+        .right-section{
+            width: 100%;
+            transition: all ease-in-out .3s;
+            margin-top: 50px;
+            .dash-title,
+            .page-title {
+                margin-top: 70px;
+            }
+           
+        }
+        .right-section.active{
+            width: calc(100% - 200px);
+            
+            
+            
+        }
+
+    }
+    .left-section {
+        width: 154px;
+    }
+    .content-wrapper .left-section::before {
+        left: -200px;
+        margin-top: 50px;
+        top: 50px;
+    }
+    .content-wrapper .left-section.active::before {
+        left: 0;
+        top: 50px;
+        
+    }
+    
+}
+.right-section{
+    margin-top: 0 !important;
+}
+@media(max-width:768px){
+    .image-gallary .img-ga-title{
+        font-size: 20px !important;
+        padding: 8px !important;
+    }
+    .page-title {
+        margin-top: 70px !important;
+    }
+    .filter-btn-group {
+        float: right !important;
+    }
+    .m-none {
+        display: none;
+    }
+}
+@media(min-with:768px){
+    .page-title h2 {
+        margin-top: 50px !important;
+    }
+    .page-title {
+        margin-top: 70px !important;
+    }
+    
+    
+}
+@media(max-width:500px){
+    .header-vendor-user-area{
+        display: block;
+    }
+    // .header-section .right-section{
+    //     width: 100% !important;
+    // }
+    .header-manu-area .mobile-vendor-menu {
+        right: -40px;
+    }
+    .header-manu-area{
+        display: none;
+    }
+    .page-title {
+        margin-top: 50px !important;
+    }
+    
+}
+@media(max-with: 576px){
+  .bulk-action {
+        width: 100% !important;
+        .bttn-group{
+            width: 100%;
+        }
+    }
+}
+/* --- Responsive area end  --- */
+/* --- Dashbord body css start --- */
+
+.right-section {
+    .dash-title{
+        background-color: $white-color;
+        width: 100%;
+        margin-top: 40px;
+        padding: 20px 20px;
+        background-color: $primary-color;
+        h4{
+           padding-bottom: 0;
+          
+           color: $white-color;
+        }
+    }
+    .body-wrapper{
+        
+        padding: 5px;
+        border: 1px solid $primary-color;
+        margin-bottom:30px;
+        margin-left: 20px;
+
+        background-color: $white-color;
+        .key-store{
+            color: $primary-color;
+            padding: 10px 0px;
+            margin: 0px;
+        }
+        .status-title{
+            width: 100%;
+            background-color: $primary-color;
+            padding: 10px;
+            .report{
+                padding: 0;
+                margin: 0;
+                color: $white-color;
+                font-weight: 500;
+                span{
+                    margin-left: 10px;                    
+                }
+            }
+
+        }
+        .key-perfomance{
+            width: 100%;
+            float: left;
+            .items{
+                float: left;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid $primary-color;
+                border-bottom: none;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 500;
+                color: rgb(117, 117, 117);
+                &:last-child{
+                    border-bottom: 1px solid $primary-color;
+                }
+                p{
+                    margin: 0;
+                    padding: 5px;
+                }
+                
+                .icon{
+                    flex: 1;
+                    padding: 10px;
+                }
+                .value-box{
+                    flex: 3;
+                    padding: 3px;
+                    p{
+                        border: 1px solid $primary-color;
+                        background-color: rgba($color: $primary-color, $alpha: 0.2);
+                        color: $primary-color;
+                    }
+                }
+                .valu{
+                    flex: 3;
+                    p{
+                        span{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .inside{
+            .inside-item{
+                p{
+                   
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 15px;
+                }
+                color: $primary-color;
+                span{
+                    margin-left: 10px;
+                    strong{
+                        font-weight: 700;
+                    }
+                }
+                span.no-amount{
+                    background-color: $primary-color;
+                    color: $white-color;
+                    padding: 5px;
+                    margin-top: 20px;
+                }
+            }
+            .query-bar{
+                margin-top: 20px;
+                border: 1px solid $primary-color;
+                padding: 10px;
+                width: 100%;
+                border-left: 5px solid $primary-color;
+                select{
+                    option{
+                        &:hover{
+                            background-color: $active-color;
+                        }
+                    }
+                }
+                label{
+                   margin-right: 10px;
+                   
+                   }
+                   #query{
+                    border: 1px solid $primary-color;
+                }
+            }
+            .q-data{
+                p{
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+                span.no-amount{
+                    background-color: $primary-color;
+                    color: $white-color;
+                    padding: 5px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .body-wrapper{
+        .product-review{
+            
+            display: flex;
+            .img-body{
+                margin-right: 20px;
+                width: 150px;
+                height: 150px;
+                img{
+                    width: 100%;
+                   
+                }
+            }
+            .review-content{
+               .replay-btn{
+                   background-color: $primary-color;
+                   border: 1px solid $primary-color;
+                   padding: 5px 10px;
+                   color: $white-color;
+                   margin-top: 15px;
+                   transition: all ease-in-out .3s;
+                   &:hover{
+                       background-color: $active-color;
+                   }
+               }
+               .modal-content{
+                   .modal-header{
+                    .btn-close{
+                        float: right !important;
+                        padding: 10px;
+                        background-color: $primary-color;
+                        text-align: right;
+                        fill: $white-color !important;
+                        opacity: 1;
+                    }
+                   }
+                   
+                   .admin-send-btn{
+                       background-color: $primary-color;
+                       padding: 5px 10px;
+                       border: 1px solid $primary-color;
+
+                   }
+                   .modal-header{
+                       border-bottom: none;
+                   }
+                   .modal-footer{
+                       border-top: none;
+                   }
+               }
+            }
+        }
+        
+       
+    }
+}
+.dash-section-title{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.transaction{
+    padding: 5px;
+        
+    .witdrawn{
+        background-color: $primary-color;
+        margin-top: 20px;
+        padding: 15px;
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+    .status{
+        border: 1px solid $primary-color;
+        // padding: 10px;
+        margin-top: 15px;
+        float: left;
+        width: 100%;
+        .graph-view{
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            .gr-item{
+                flex: 1;
+                text-align: center;
+                background-color: #ccc;
+                height: 100px;
+                margin: 0 5px;
+                position: relative;
+                z-index: -2;
+                .pr-bg{
+                    p{
+                        border-bottom: 1px solid $white-color;
+                        padding: 2px 0px ;
+                        bottom: 0;background-color: $primary-color;
+                        color: $white-color;
+                        font-weight: 500;
+                        
+                    }
+                    background-color: $primary-color;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    width: 100%;
+                    
+                }
+                .pub-bg{
+                    background-color: #AF3B2E;
+                    p{
+                        background-color: #AF3B2E;
+                    }
+                }
+                .pending-bg{
+                    background-color: #A75579;
+                    p{
+                        background-color: #A75579;
+                    }
+                }
+                .draft-bg{
+                    background-color: #BA7237;
+                    p{
+                        background-color: #BA7237;
+                    }
+                }
+                .not-bg{
+                    background-color: #358085;
+                    p{
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                        background-color: #358085;
+                    }
+                }
+            }
+        }
+        .vartical-bar{
+            width: 100%;
+            float: left;
+            margin-top: 20px;
+            padding: 5px;
+            .ver-item{
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid $primary-color;
+                padding: 10px;
+                align-items: center;
+                margin-bottom: 5px;
+                border-left: 5px solid;
+                p{
+                    
+                    
+                }
+                span{
+                 
+                    background-color: $primary-color;
+                    color: $white-color;
+                    padding: 5px;
+
+                }
+        
+            }
+            .pub-bdr{
+                border-color: #AF3B2E;
+            }
+            .pend-bdr{
+                border-color: #A75579;
+            }
+            .draft-bdr{
+                border-color: #BA7237;
+            }
+            .not-bdr{
+                border-color:  #358085;
+            }
+        }
+        .add-product{
+            padding: 10px;
+            display: block;
+            width: calc(100% - 10px);
+            float: left;
+            border: 1px solid $primary-color;
+            margin: 5px;
+            transition: all ease-in-out 0.3s;
+            span{
+                margin-left: 10px;
+            }
+            &:hover{
+                background-color: $active-color;
+                color: $white-color;
+            }
+        }
+    }
+    .customer-review-area{
+        width: 100%;
+        padding: 5px;
+        .customer-review{
+            width: 100%;
+            float: left;
+            display: block;
+            
+            .cus-rview-contr{
+                width: 100%;
+                display: flex;
+                border-bottom: 1px solid $primary-color;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                &:last-child{
+                    border-bottom: none;
+                }
+              
+                .img-body{
+                    width: 20% !important;
+                    height: 80px !important;
+                    margin-right: 15px;
+                    overflow: hidden;
+                    border: 1px solid $primary-color;
+                    
+                }
+                .body-content{
+                    width: calc(100% - 95px);
+                    .cust-qst{
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid $primary-color;
+                        padding-bottom: 15px;
+                        
+                    }
+                    .cust-qst:last-child{
+                        border-bottom: none;
+                    }
+                    .replay-btn{
+                        background-color: $primary-color;
+                        border: 1px solid $primary-color;
+                        padding: 5px 10px;
+                        color: $white-color;
+                        margin-top: 15px;
+                        transition: all ease-in-out .3s;
+                        &:hover{
+                            background-color: $active-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* --- Dashbord body css end --- */
+/* --- Footer css start --- */
+.footer-section{
+    background-color: $primary-color;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    margin-top: 20px;
+    color: #fff;
+}
+/* --- Footer css end --- */
+/* Store front page CSS start */
+.page-title {
+    background-color: $primary-color;
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+
+    h2 {
+        color: $white-color;
+    }
+    .btn-save{
+        float: right;
+        padding: 5px 20px;
+        background-color: $active-color;
+        color: $white-color;
+        border: 1px solid $active-color;
+        &:hover{
+            background-color: $white-color;
+            color: $primary-color;
+        }
+    }
+
+}
+// select {
+//     background-color: $primary-color;
+// }
+select option {
+    background-color: $primary-color;
+  
+
+}
+select option:hover {
+    background-color: $active-color !important;
+}
+.store-banner {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 1px solid $primary-color;
+
+    margin-top: 40px;
+
+
+    .banner {
+        position: relative;
+        z-index: -1;
+
+        img {}
+
+        a {
+            p {
+                position: absolute;
+                right: 20px;
+                bottom: 40px;
+                background-color: $primary-color;
+                padding: 8px;
+                color: #fff;
+            }
+        }
+
+        .vendor-logo {
+            position: absolute;
+            left: 20px;
+            bottom: -5px;
+            width: 110px;
+            height: 110px;
+            font-size: 14px;
+            float: left;
+            z-index: 2;
+            input[type="file"]{
+                display: none;
+            }
+            label{
+                position: absolute;
+                width: 100%;
+                right: 0px;
+                bottom: 0px;
+                background-color: $primary-color;
+                color: $white-color;
+                padding: 8px 10px;
+                transition: all ease-in-out 0.3s;
+                &:hover{
+                    background-color: $active-color;
+                }
+                .imp-file{
+                    margin-left: 5px;
+                }
+            }
+            
+            
+        }
+        input[type="file"]{
+            display: none;
+        }
+        label{
+            position: absolute;
+            right: 100px;
+            bottom: 40px;
+            background-color: $primary-color;
+            color: $white-color;
+            padding: 8px 10px;
+            transition: all ease-in-out 0.3s;
+            &:hover{
+                background-color: $active-color;
+            }
+            .imp-file{
+                margin-left: 10px;
+            }
+        }
+    }
+    
+}
+
+.public-section {
+    width: 100%;
+    float: left;
+    display: block;
+
+    .container-fluid {
+        .row {
+            .wrapper {
+                background-color: #fff;
+                margin: 20px 20px;
+                padding: 20px 20px;
+                width: calc(100% - 40px);
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+    .btn-save{
+        float: right;
+        padding: 5px 20px;
+        margin-right: 50px;
+        background-color: $active-color;
+        color: $white-color;
+        border: 1px solid $active-color;
+        &:hover{
+            background-color: $white-color;
+            color: $primary-color;
+        }
+    }
+}
+
+
+/* Store front page CSS end */
+
+
+/* --- Policies pages CSS start --- */
+.section-title{
+    margin-top: 30px;
+}
+/* --- Policies pages CSS end --- */
+/* --- All Product Pages css start --- */
+.ml-10{
+    margin-left: 5px;
+}
+.apply-btn{
+    padding: 8px 20px;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+    width: 80px;
+    color: $white-color;
+    &:hover{
+        background-color: $active-color;
+    }
+}
+.product-filter-group{
+    width: 100%;
+    float: left;
+    .product-filter-nav{
+        display: flex;
+        li{
+            padding: 0px 10px;
+            border-right: 1px solid $primary-color;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+}
+.serch-input-group{
+    display: flex;
+    width: 100%;
+    float: left;
+}
+.search-control {
+    width: 90%;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+    
+}
+[type="search"] {
+    padding: 0px 10px !important;
+    outline-offset:none;
+    outline: none;
+}
+.search-btn{
+    padding: 5px 20px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    transition: all ease-in-out 0.3s;
+    color: $white-color;
+    border-radius: 5px;
+    &:hover{
+        background-color: $active-color;
+    }
+}
+.pro-cust-filter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .bulk-action{
+        margin-bottom: 20px;
+        
+        #bulk-action{
+            width: 80%;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+        }
+        
+        .btn-group{
+            display: flex;
+        
+        }
+    }
+    .category-filter{
+        margin-bottom: 20px;
+       
+        #category{
+            width: 100%;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+            height: 38px;
+        }
+    }
+    .product-type-filter {
+        
+        #product-type{
+           width: calc(100% - 90px);
+           border: 1px solid $primary-color;
+           border-radius: 5px;
+           height: 38px;
+        }
+    }
+    
+}
+.pagination{
+    float: right;
+}
+.page-link{
+    color: $primary-color;
+    &:hover{
+        background-color: $active-color;
+        color: $white-color;
+        border: 1px solid $primary-color;
+    }
+}
+.page-item.active .page-link{
+    background-color: $active-color;
+    border: 1px solid $primary-color;
+    color: $white-color;
+}
+.product-list{
+    #checkbox{
+        width: 20px;
+        height: 20px;
+    }
+}
+.ch-color{
+    background-color: $primary-color;
+    color: $white-color;
+    &:hover{
+        background-color: $active-color;
+        color: $white-color;
+    }
+}
+.pro-list{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.pro-status{
+    padding: 5px 10px;
+    color: $white-color;
+}
+.stock{
+    background-color: #198754;
+}
+.stock-out{
+    background-color: red;
+}
+.stock-low{
+    background-color: #ffc107;
+}
+
+/* --- All Product Pages css end --- */
+/* --- Add New Product CSS Start--- */
+.mr-10{
+    margin-right: 10px;
+}
+.product-img-banner{
+    width: calc(100% - 80px);
+    margin: 40px auto;
+}
+.add-product-section{
+    .add-new{
+        color: $primary-color;
+    }
+    
+}
+.catalog{
+    margin-top: 30px;
+    float: left;
+}
+.dot {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    float: left;
+    color: $primary-color;
+}
+.select-cat{
+    color: $primary-color;
+    margin-top: 20px;
+    span{
+        color: #333;
+    }
+}
+
+.btn-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .input-icons{
+        .input-field{
+            padding: 5px;
+            padding-left: 30px;
+        }
+        width: calc(100% - 130px);
+        position: relative;
+        .icon{
+            position: absolute;
+            font-size: 25px;
+            left: 0;
+            top: 10;
+            padding: 8px;
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+.category-selection-box{
+    background-image: url('assets/images/icon-bg.png');
+    width: calc(100% - 40px);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+
+    .category-select{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        
+        .prev{
+            width: 60px;
+            text-align: center;
+            background-color: $primary-color;
+            height: 100%;
+            color: $white-color;
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 20px;
+            margin-left: -12px;
+            &:hover{
+                background-color: $active-color;
+            }
+        }
+        .category-item-box{
+            width: calc(100% - 96px);
+            .cat-scroll-box{
+                width: 300px;
+                background-color: $white-color;
+                float: left;
+                height: 350px;
+                overflow: auto;
+                
+                .cat-nav{
+                    background-color: $white-color;
+                    li{
+                        float: left;
+                        width: 100%;
+                        position: relative;
+                        padding: 2px 0px;
+                        &::before{
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            left: 20px;
+                            bottom: 0px;
+                            position: absolute;
+                            z-index: 1;
+                            background-color: #ccc;
+                            &:last-child{
+                                background: none;
+                            }
+                            
+                        }
+                        a{
+                            width: 100%;
+                            float: left;
+                            padding: 10px 20px;
+                            font-weight: 400;
+                            &:hover{
+                                background-color: $active-color;
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .select-hover-box{
+                width: 300px;
+                height: 350px;
+                text-align: center;
+                float: left;
+                background: $white-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .select-box{
+                    .slect-btn{
+                        margin-top: 20px;
+                        background-color: $primary-color;
+                        padding: 10px 30px;
+                        border: 1px solid $primary-color;
+                        color: $white-color;
+                        font-weight: 400;
+                        transition: all ease-in-out 0.3s;
+                        &:hover{
+                            background-color: $active-color;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .next{
+            width: 60px;
+            text-align: center;
+            background-color: $primary-color;
+            height: 100%;
+            color: $white-color;
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 20px;
+            float: right;
+            margin-right: -12px;
+            &:hover{
+                background-color: $active-color;
+            }
+        }
+    
+    }
+}
+
+
+.cat-scroll-box::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+  }
+  
+  .cat-scroll-box::-webkit-scrollbar-track {
+    background: #fae7ef;        /* color of the tracking area */
+    opacity: 0.2;
+  }
+  
+  .cat-scroll-box::-webkit-scrollbar-thumb {
+    background-color: $primary-color;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    &:hover{
+        background-color: $active-color;
+    }
+  }
+    
+/* --- Add New Product CSS end--- */
+/* --- Add edit pages CSS start --- */
+.add-btn-group{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    .btn-save{
+        width: 120px;
+    }
+}
+.option-btn{
+    color: $primary-color;
+    span{
+        color: #333;
+        
+    }
+}
+.svg-inline--fa.fa-chevron-square-down.fa-w-14.mr-10{
+    color: #000 !important;
+}
+.option-control{
+    position: relative;
+    cursor: pointer;
+    .option-body{
+        text-align: left;
+        width: 300px;
+        position: absolute;
+        right: -32px;
+        top: 48px;
+        background-color: $white-color;
+        padding: 20px;
+        display: none;
+        transition: all ease-in-out .3s;
+        border: 1px solid $primary-color;
+        border-radius: 0px 0px 5px 5px;
+        z-index: 2;
+        .form-check{
+            margin: 10px 0;
+        }
+        .action-btn{
+            .aadd-btn{
+                background-color: $primary-color;
+                color: $white-color;
+                padding: 10px 20px;
+                border: 1px solid $primary-color;
+                margin-right: 20px;
+                &:hover{
+                    background: $active-color;
+                }
+            }
+        }
+        
+    }
+    
+}
+.bdr{
+    border: 1px solid $primary-color;
+}
+.bdrleft-5{
+    border-left: 5px solid $primary-color;
+}
+.option-body.active{
+    display: block;
+}
+.product-fe-img{
+    border: 1px solid $primary-color;
+    padding: 5px;
+}
+.product-fe-img-up{
+    margin-top: 20px;
+    border: 1px solid $primary-color;
+    text-align: center;
+    padding: 50px;
+    cursor: pointer;
+    #file{
+        display: none;
+    }
+    label{
+        cursor: pointer;
+    }
+}
+.image-gallary{
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid $primary-color;
+    .img-ga-title{
+        width: 100%;
+        background-color: $primary-color;
+        float: left;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $white-color;
+    }
+    .gal-img{
+        width: 28.5%;
+        border: 1px solid $primary-color;
+        padding: 5px;
+        padding: 5px;
+        margin: 4px;
+    }
+   
+    
+
+}
+.arrow-control{
+    display: flex;
+    float: right;
+margin-top: 30px;
+    .fa-control{
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 10px 15px;
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        border: 1px solid $primary-color;
+        &:hover{
+            background-color: $active-color;
+        }
+
+       
+    }
+   
+}
+.bdr-top {
+    border: 1px solid $primary-color;
+    margin-top: -1px;
+}
+.schedule-control{
+    position: relative;
+    .schedule{
+        float: right;
+        background-color: $white-color;
+        border: none;
+        padding: 10px;
+        color: $primary-color;
+        &:hover{
+            color: $active-color;
+        }
+        
+    }
+    .schedule-div{
+        position: absolute;
+        right: 0;
+        top: 40px;
+        padding: 20px;
+        background-color: $white-color;
+        width: 310px;
+        display: none;
+        height: 0px;
+        transition: all ease-in-out 0.3s;
+        border: 1px solid $primary-color;
+        border-radius: 0px 0px 5px 5px;
+        .cancel{
+            background-color: $primary-color;
+            padding: 10px 20px;
+            border: 1px solid $primary-color;
+            float: right;
+            margin-top: 20px;
+            color: $white-color;
+            transition: all ease-in-out 0.3s;
+            &:hover{
+                background-color: $active-color;
+                
+            }
+        }
+    }
+    .schedule-div.active{
+        display: block;
+        
+    }
+
+}
+.question{
+    float: left;
+    padding: 10px;
+    margin-left: 14px;
+    cursor: pointer;
+    position: relative;
+    .question-msg{
+        width: 200px !important;
+        background-color: #333;
+        color: $white-color;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+    }
+    .question-msg.active {
+        display: block;
+    }
+}
+
+.cust-form-control, #allow-back {
+    width: calc(100% - 50px);
+    height: 38px;
+    border: 1px solid $primary-color;
+    float: right;
+    border-radius: 5px;
+    outline: none;
+    &:focus-visible{
+        border: 1px solid $active-color;
+    }
+}
+#mng-stock{
+    margin-left: 50px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $primary-color;
+}
+.ml-50{
+    margin-left: 50px;
+    font-size: 14px;
+}
+#add-fe-attribute{
+    width: calc(100% - 80px);
+    float: left;
+    height: 38px;
+    border: 1px solid $primary-color;
+    background-color: $white-color;
+    border-radius: 5px;
+}
+.add-btn{
+    padding: 8px 22px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white-color;
+    float: right;
+    &:hover{
+        background-color: $active-color;
+    }
+}
+.collapse-div.active{
+    display: none;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.save-attrb-btn {
+    width: 200px;
+    float: left;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white-color;
+    &:hover{
+        background-color: $active-color;
+    }
+}
+.attrb-bg{
+    background-color: $primary-color;
+    color: $white-color;
+    font-weight: 500;
+    .attrb{
+        p{
+            color: $white-color;
+            cursor: pointer;
+        }
+        
+    }
+    .remove-class{
+        color: $white-color;
+        cursor: pointer;
+    }
+    .remove-group{
+        float: right;
+        width: 80px;
+        .remove-btn{
+            color: $active-color;
+            background-color: $primary-color;
+            border: none;
+        }
+    }
+    .remove-class{
+        float: left;
+    }
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: $primary-color $primary-color $white-color;
+}
+/* --- Add edit pages CSS end --- */
+/* --- status / Report CSS start --- */
+
+.date-section{
+    .range-text{
+        margin-top: 10px;
+    }
+    .form, .to{
+        position: absolute;
+        z-index: 10;
+        left: 10px;
+        top: 10px;
+        width: 30px;
+        height: 20px;
+        color: $primary-color;
+        font-weight: 500;
+    }
+    .form-posi{
+        padding-left: 50px;
+    }
+    .to-posi{
+        padding-left: 30px;
+        
+    }
+    #basic-addon2{
+        background-color: $white-color;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+    .filter-btn-group{
+        display: flex;
+        .btn-filter, .btn-download{
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+            padding: 10px 20px;
+            color: $white-color;
+            border-radius: 5px;
+            &:hover{
+                background-color: $active-color;
+            }
+        }
+        .btn-download{
+            margin-left: 15px;
+        }
+
+    }
+
+}
+.search-report{
+    display: block;
+    width: 100%;
+    float: left;
+    .report-item{
+        display: flex;
+        border: 1px solid $primary-color;
+        margin: 10px 0px;
+        .title{
+
+            flex: 2;
+            p{
+                padding: 10px;
+            }
+        }
+        .value{
+            flex: 1;
+            background-color: rgba($primary-color, $alpha: 0.3);
+            color: $primary-color;
+            font-weight: 700;
+            text-align: right;
+            p{
+                padding: 10px;
+            }
+        }
+    }
+}
+
+/* --- status / Report CSS end --- */
+/* --- Banking overview CSS start --- */
+.bank-overview{
+    .bank-info{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary-color;
+        .bank-info-title{
+            p, h4{
+                padding: 5px 15px;
+                color: $white-color;
+                font-weight: 500;
+            }
+        }
+        .bank-info-icon{
+            width: 80px;
+            height: 80px;
+            background-color: $active-color;
+            font-size: 60px;
+            padding: 10px;
+            color: $white-color;
+        }
+    }
+}
+.page-info{
+    #number{
+        background-color: $white-color;
+        border: 1px solid $primary-color;
+        width: 100px;
+        border-radius: 5px;
+    }
+}
+.bank-date-section{
+    .btn-show {
+        background-color: $primary-color;
+        padding: 10px 20px;
+        border: 1px solid $primary-color;
+    }
+    #basic-addon2{
+        background-color: $white-color;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+}
+
+
+/* --- Banking overview CSS end--- */
+/* --- Order page CSS start --- */
+.order-filter{
+    display: flex;
+    .btn-group{
+        width: 45%;
+        #action, #filter{
+            width: calc(100% - 60px);
+            margin-right: 5px;
+            height: 38px;
+            background-color: $white-color;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+        }
+        .od-btn{
+            background-color: $primary-color;
+            color: $white-color;
+            border: 1px solid $primary-color;
+            padding: 8px 20px;
+        }
+    }
+}
+/* --- Order page CSS end --- */
+/* --- Profile management page CSS start --- */
+.profile-management{
+    .profile-img{
+        width: 150px;
+        height: 150px;
+        border: 1px solid $primary-color;
+        padding: 5px;
+    }
+    #file{
+        display: none;
+    }
+    .pro-img{
+        padding: 5px 13px;
+        background-color: $primary-color;
+        color: $white-color;
+        cursor: pointer;
+        &:hover{
+            background-color: $active-color;
+        }
+        .imp-file{
+            margin-left: 10px;
+        }
+    }
+}
+.knowledgebase{
+    .accordion-button:not(.collapsed){
+        background-color: rgba( $primary-color, $alpha: 0.3);
+        color: $primary-color;
+    }
+}
+.pass-btn{
+    background-color: $primary-color;
+    padding: 5px 15px;
+    border: 1px solid $primary-color;
+    color: $white-color;
+    &:hover{
+        background-color: $active-color;
+    }
+}
+// Left Menu css 
+.dash-icon {
+    margin-right: 5px;
+}
+.left-primary-menu{
+    .left-menu {
+        width: 100%;
+        float: left;
+        li{
+            width: 100%;
+            
+            a{
+                width: 100%;
+                &:hover{
+                    background-color: $active-color !important;
+                }
+                .icon{
+                    margin-right: 5px;
+                }
+                .arrow{
+                    float: right;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            a.active{
+                background-color: $active-color;
+            }
+            .dropdown-accord-menu{
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+                li{
+                    a{
+                        background-color: $sub-menue-bg;
+                        transition: all 0.3s ease-in;
+                        .icon {
+                            margin-left: 15px;
+                        }
+                        &:hover{
+                            background-color: $sub-menu-hover !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+
+}
+.left-primary-menu .left-menu li.active a{
+    background-color: $active-color;
+}
+.left-primary-menu .left-menu li.active .dropdown-accord-menu {
+    height: 150px;
+    
+}
+.left-primary-menu .left-menu li.active a .arrow {
+    float: right;
+    transform: rotate(90deg);
+}
+
+.left-primary-menu .left-menu li .dropdown-accord-menu li.active {
+   
+
+
+}
+// .left-primary-menu .left-menu li .dropdown-accord-menu li.active a{
+//     background-color: $sub-menu-hover;
+//     height: 150px;
+// }
+// .submenu.active {
+//     height: 150px !important;
+//     background-color: $sub-menu-hover;
+    
+// }
+.left-menu li, .nav.submenu {
+   background-color: $sub-menue-bg !important; 
+}
+.nav.submenu li a {
+    background-color: $sub-menue-bg;
+    .icon{
+        margin-left: 10px;
+    }
+  
+}
+.nav.submenu li a:hover{
+    background-color: $sub-menu-hover !important;
+}
+.nav.submenu li.active a{
+ background-color: $sub-menu-hover !important;
+ 
+}
+.hasmenu a.active .arrow{
+    transform: rotate(90deg);
+}
+/* --- Profile management page CSS end --- */
+/* --- Pagination start --- */
+.pagination-cust{
+    margin-top: 20px;
+    float: right;
+    height: 100%;
+    ul{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        li{
+            background-color: $primary-color;
+            padding: 10px 0px;
+            a{
+                color: $white-color;
+                padding: 10px;
+                &:hover{
+                    background-color: $active-color;
+                    
+                }
+            }
+            a.active{
+                background-color: $active-color;
+            }
+        }
+        li.first, li.last{
+            background-color: $white-color;
+            a{
+                color: $primary-color;
+                &:hover{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+/* --- Pagination end --- */
+/* --- ddd --- */
+/* --- ddd --- */
+/* --- ddd --- */
+/* --- ddd --- */
+/* --- ddd --- */
+/* --- --- */
+/* --- --- */
+/* --- --- */
+/* --- --- */
+/* --- --- */
+/* --- --- */
+/* --- --- */
