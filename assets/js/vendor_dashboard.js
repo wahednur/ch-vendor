@@ -2,7 +2,7 @@ jQuery( document ).ready( function ( $ ) {
     //checkbox_custome_design();
     $( ".hasmenu > a" ).click( function ( e ) {
 
-        if ( $( this ).attr( 'href' ) == '#' ) {
+        if ( $( this ).attr( 'href' ) === '#' ) {
             e.preventDefault();
         }
             
